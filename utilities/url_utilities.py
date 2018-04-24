@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 def load_urls_from_file(file_path: str):
     try:
         with open(file_path) as f:
-            content = f.readline()
+            content = f.readlines()
             return content
     except FileNotFoundError:
         print('文件:' + file_path + '不存在！')
